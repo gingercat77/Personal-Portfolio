@@ -1,0 +1,347 @@
+# Sections content configuration file
+##
+### use navigation.yml file to re-order, delete or add section of each card
+### here you can find all content in all pre-build sections
+
+### Started [ started ]
+started:
+  title: "Jeremiah <br />Jayoma"
+  typed:
+    - "Graphics Designer"
+    - "Web Designer"
+    - "Programmer"
+  text: "Hello! I am Graphics Designer, Video Editor, and a Programmer from Nabunturan, Davao de Oro, Philippines. I have rich experience in graphic design and editing, also I am good at wordpress. I love to talk with you about our unique."
+  button:
+    text: "Contact Me"
+    link: "#section-contacts"
+
+### About [ about ]
+about:
+  title: "About Me"
+  subtitle: "My story"
+  text: '<p style="text-align: justify;">Currently, I am a 4th-year student pursuing a Bachelor of Science in Information Technology at Davao Del Norte State College (DNSC). The COVID-19 pandemic presented a unique opportunity for students like me to enter the school without an entrance exam. This privilege, along with flexible classes, has allowed me to become the best version of myself, developing my skills while learning in the comfort of my home.</p><p>As a continuing student, I believe in the saying, "Malayo na pero malayo pa" (I have come so far, but still have far to go). I have reached this point, and I never thought I would achieve so much over the years.</p>'
+  list:
+    - label: "Age"
+      value: "22"
+
+    - label: "Residence"
+      value: "Philippines"
+
+    - label: "Freelance"
+      value: "Available"
+
+    - label: "Address"
+      value: "Nabunturan, Davao de Oro"
+
+    - label: "Phone"
+      value: "0930 944 5516"
+
+    - label: "E-mail"
+      value: "jayomajeremiah@gmail.com"
+
+### Services [ services ]
+services:
+  title: "Services"
+  subtitle: "What I Do"
+  items:
+    # - icon: "fas fa-brain"
+    #   name: "Economic <br />Science"
+    #   text: "Economics is a social science concerned with the production, consumption of goods and services."
+
+    - icon: "fas fa-hashtag"
+      name: "Social Media Marketing <br />& Advertising"
+      text: "Setting content strategy and driving engagement on your company's social platforms involves storytelling and creative design."
+
+    - icon: "fab fa-chrome"
+      name: "Web Design"
+      text: "Expert in user interface (UI) and user experience (UX), strategically designing sites that are intuitive and easy to navigate."
+
+    - icon: "fas fa-headphones"
+      name: "Music Writing"
+      text: "Compose gospel, ambient, and instrumental music, along with musical parts. Aid in your song journey from composition to release."
+
+    # - icon: "fas fa-gamepad"
+    #   name: "Game <br />Development"
+    #   text: "Come Up With a Game Idea. An idea is the first thing that comes to mind when a game is being described before creating."
+
+    - icon: "fas fa-video"
+      name: "Photography <br />& Video"
+      text: "I capture precious moments from your important life events. Don’t worry about documenting yourself—I’ve got you covered. Enjoy your moment while I handle the details."
+   
+    - icon: "fas fa-film"
+      name: "Video Editing"
+      text: "I transform raw videos into meaningful pieces of art. I edit various types of videos—just name it—and turn your ideas into viral content."
+
+    - icon: "fas fa-pen"
+      name: "Graphics Design"
+      text: "I’ll help turn your product into a memorable brand through modern design and dynamic style."
+  
+### Pricing [ pricing ]
+pricing:
+  title: "Pricing"
+  subtitle: "My Plans"
+  items:
+    - icon: "fas fa-star"
+      name: "Basic"
+      price: "189"
+      price_before: "₱"
+      price_after: "hour"
+      list:
+        - value: "Social Media Marketing"
+          disable: "no"
+        - value: "Music Writing"
+          disable: "no"
+        - value: "Photography"
+          disable: "no"
+        - value: "Video"
+          disable: "yes"
+        - value: "Advertising"
+          disable: "yes"
+        - value: "Graphics Design"
+          disable: "yes"
+      button: "Buy Now"
+      link: "#section-contacts"
+
+    - icon: "fas fa-rocket"
+      name: "Premium"
+      price: "260"
+      price_before: "₱"
+      price_after: "hour"
+      list:
+        - value: "Web Development"
+          disable: "no"
+        - value: "Advetising"
+          disable: "no"
+        - value: "Game Development"
+          disable: "no"
+        - value: "Music Writing"
+          disable: "no"
+        - value: "Photography"
+          disable: "no"
+        - value: "Video"
+          disable: "no"
+      button: "Buy Now"
+      link: "#section-contacts"
+
+    - icon: "fas fa-space-shuttle"
+      name: "Ultimate"
+      price: "510"
+      price_before: "₱"
+      price_after: "hour"
+      list:
+        - value: "Web Development"
+          disable: "no"
+        - value: "Social Media Marketing"
+          disable: "no"
+        - value: "Advertising"
+          disable: "no"
+        - value: "Graphics Design"
+          disable: "no"
+        - value: "Music Writing"
+          disable: "no"
+        - value: "Photography & Video"
+          disable: "no"
+      button: "Buy Now"
+      link: "#section-contacts"
+
+### Resume [ resume ]
+resume:
+  experience:
+    title: "Experience"
+    subtitle: "Working with"
+    items:
+      - year: "Present"
+        name: "Video Editor<br />CE Editors"
+        text: "Helped couple of YouTubers grow their channel. Converting their ideas in to creative video"
+
+      - year: "2021-2023"
+        name: "Multimedia Artist <br />IDEAS"
+        text: "Capture photos, make posters, and head video editor during the Kalibulung 2023"
+
+      - year: "2020-2021"
+        name: "Inventory Manager <br />Five R Bolts and Nuts"
+        text: "Head inventory manager, data manager, and encoder."
+
+      - year: "2019-2020"
+        name: "Art Director <br />Facedevs"
+        text: "Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna."
+
+  education:
+    title: "Education"
+    subtitle: "Studied at"
+    items:
+      - year: "Present"
+        name: "Davao del Norte State College <br />Panabo"
+        text: "I am currently pursuing a Bachelor of Science in Information Technology and am in my 4th year, deepening my expertise and preparing for a career in the field."
+
+      - year: "2019-2021"
+        name: "NNCHS ISHS <br />Nabunturan"
+        text: "I completed Senior High School, focusing on Computer Programming NC III, which enhanced my technical skills and prepared me for a career in IT."
+
+      - year: "2016-2019"
+        name: "Mainit NHS <br />Mainit"
+        text: "I attended Junior High from grade 7 (2016) to grade 10 (2019), where I developed foundational skills and knowledge that prepared me for further education."
+
+      - year: "2007-2016"
+        name: "Mainit Elementary School <br />Mainit"
+        text: "JI completed my elementary education, laying the foundation for my future academic and personal growth."
+        
+### Skills [ skills ]
+skills:
+  columns:
+    - type: "default" #skills progress type - default, dotted, circles
+      title: "Design Skills"
+      subtitle: "Creative ability"
+      slug: "design"
+      items:
+        - label: "Web Design"
+          value: "90" #0-100 progress in %
+          text: "Combine creative design with technical expertise to develop functional, visually appealing web pages."
+
+        - label: "Social Media"
+          value: "70" #0-100 progress in %
+          text: "Develop engaging content that captures audience attention and drives interaction. <br /><br />"
+
+        - label: "Photoshop"
+          value: "95" #0-100 progress in %
+          text: "Proficient in Adobe Photoshop with years of experience, including color grading, photo manipulation, and creating posters for special occasions."
+
+        - label: "Graphic Design"
+          value: "85" #0-100 progress in %
+          text: " I have an in-depth understanding of typography, color theory, and composition, with technical skills essential for bringing ideas to life.<br /><br />"
+
+    - type: "dotted" #skills progress type - default, dotted, circles
+      title: "Language Skills"
+      subtitle: "Reading and writing"
+      slug: "lang"
+      items:
+        - label: "English"
+          value: "90" #0-100 progress in %
+          text: "ability to engage in meaningful conversations, understand cultural nuances, and respond appropriately"
+
+        - label: "Tagalog"
+          value: "70" #0-100 progress in %
+          text: "Strong national identity and personal development. Cultivating a strong sense of self and belonging by connecting with cultural roots and fostering personal growth."
+
+        - label: "Bisaya"
+          value: "98" #0-100 progress in %
+          text: "Communicate in the vernacular language to enhance understanding and improve communication."
+
+        # - label: "French"
+        #   value: "85" #0-100 progress in %
+        #   text: "Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh."
+
+    - type: "circles" #skills progress type - default, dotted, circles
+      title: "Coding Skills"
+      subtitle: "Developing on"
+      slug: "code"
+      items:
+        # - label: "WordPress"
+        #   value: "90" #0-100 progress in %
+        #   text: "Etiam sit amet orci eget eros faucibus tincidunt."
+
+        # - label: "PHP, MYSQL"
+        #   value: "45" #0-100 progress in %
+        #   text: "Learned fundamentals, including syntax and common beginner knowledge."
+
+        - label: "JavaScript"
+          value: "40" #0-100 progress in %
+          text: "Object-oriented programming, suitable for business POS systems and simple games."
+
+        # - label: "Angular"
+        #   value: "80" #0-100 progress in %
+        #   text: "Etiam sit amet orci eget eros faucibus tincidunt."
+
+        - label: "HTML, CSS"
+          value: "80" #0-100 progress in %
+          text: "Core HTML Tags to build Modern Web Apps."
+
+        - label: "Python"
+          value: "50" #0-100 progress in %
+          text: "Multi-process Architecture and Python Frameworks"
+
+### Testimonials [ testimonials ]
+# testimonials:
+#   title: "Reviews"
+#   subtitle: "What customers say"
+#   items:
+#     - image: "assets/img/testimonials/rev1.png"
+#       name: "Joseph Mackey"
+#       role: "Architect"
+#       text: "Excellent all around! What stood out most was Jake's excellent service. He made sure our order was placed in time, even though we were ordering on a holiday."
+
+#     - image: "assets/img/testimonials/rev1.png"
+#       name: "James Green"
+#       role: "Art Director"
+#       text: "Excellent all around! What stood out most was Jake's excellent service. He made sure our order was placed in time, even though we were ordering on a holiday."
+
+#     - image: "assets/img/testimonials/rev1.png"
+#       name: "Joseph Mackey"
+#       role: "Architect"
+#       text: "Excellent all around! What stood out most was Jake's excellent service. He made sure our order was placed in time, even though we were ordering on a holiday."
+
+#     - image: "assets/img/testimonials/rev1.png"
+#       name: "James Green"
+#       role: "Art Director"
+#       text: "Excellent all around! What stood out most was Jake's excellent service. He made sure our order was placed in time, even though we were ordering on a holiday."
+
+### Clients [ clients ]
+# clients:
+#   title: "Clients"
+#   subtitle: "My partners"
+#   items:
+#     - url: "https://www.bslthemes.site"
+#       image: "assets/img/clients/client2.png"
+
+#     - url: "https://www.bslthemes.site"
+#       image: "assets/img/clients/client3.png"
+
+#     - url: "https://www.bslthemes.site"
+#       image: "assets/img/clients/client1.png"
+
+#     - url: "https://www.bslthemes.site"
+#       image: "assets/img/clients/client4.png"
+
+#     - url: "https://www.bslthemes.site"
+#       image: "assets/img/clients/client2.png"
+
+#     - url: "https://www.bslthemes.site"
+#       image: "assets/img/clients/client3.png"
+
+#     - url: "https://www.bslthemes.site"
+#       image: "assets/img/clients/client1.png"
+
+#     - url: "https://www.bslthemes.site"
+#       image: "assets/img/clients/client4.png"
+
+### Portfolio [ portfolio ]
+#items generates from dir /_works/*
+portfolio:
+  title: "Portfolio"
+  subtitle: "Latest works"
+
+### Contact [ contacts ]
+contacts:
+  title: "Contact"
+  subtitle: "Let's talk"
+  name: "Jeremiah Jayoma"
+  subname: "Graphics Designer & Video Editor"
+  signature: "Jeremiah Jayoma"
+  list:
+    - label: "Age:"
+      value: "22"
+
+    - label: "Residence:"
+      value: "Philippines"
+
+    - label: "Freelance:"
+      value: "Available"
+
+    - label: "Address:"
+      value: "Nabunturan, Davao de Oro"
+
+    - label: "Phone:"
+      value: "0930 944 5516"
+
+    - label: "E-mail:"
+      value: "jeremiahjayomaa@gmail.com"
