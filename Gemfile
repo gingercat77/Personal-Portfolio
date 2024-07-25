@@ -32,5 +32,5 @@ end
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 gem "webrick", "~> 1.7"
-gem 'public_suffix', '~> 6.0.1'  # or the latest version
+gem 'public_suffix', '~> 5.1'  # or the latest version
 
