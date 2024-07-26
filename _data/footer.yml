@@ -5,12 +5,12 @@
 
 main:
   social:
-    - title: "Pinterest"
-      icon: "fab fa-pinterest"
-      url: "https://www.pinterest.com/"
+    - title: "Facebook"
+      icon: "fab fa-facebook"
+      url: "https://www.facebook.com/jermiah02/"
     - title: "Instagram"
       icon: "fab fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://www.instagram.com/jermiahvee/"
     - title: "Dribbble"
       icon: "fab fa-dribbble"
       url: "https://dribbble.com/"
