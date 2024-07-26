@@ -8,9 +8,10 @@ main:
     - title: "Facebook"
       icon: "fab fa-facebook"
       url: "https://www.facebook.com/jermiah02/"
+    - title: "YouTube"
+      icon: "fab fa-youtube"
+      url: "https://www.youtube.com/channel/UCzpp-OwXH4-apJkm5NqrJRg"
     - title: "Instagram"
       icon: "fab fa-instagram"
       url: "https://www.instagram.com/jermiahvee/"
-    - title: "Dribbble"
-      icon: "fab fa-dribbble"
-      url: "https://dribbble.com/"
+    
