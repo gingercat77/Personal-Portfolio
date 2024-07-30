@@ -33,13 +33,27 @@
     </div>
 
     <!-- portfolio items -->
-    <div class="box-items">
-      {% for work in site.works %}
-
-      {% if work.type == 'mobile' %}
-      <div class="box-col {{ work.category_slug }}">
-        <div class="box-item">
-          <div class="image">
+  <div class="box-items">
+    {% assign types = "mobile,achievements,film,video" | split: ',' %}
+    {% for type in types %}
+      {% assign filtered_works = site.works | where: "type", type %}
+      {% for work in filtered_works %}
+        <div class="box-col {{ work.category_slug }}">
+          <div class="box-item">
+            <div class="image">
+              {% if work.type == 'mobile' %}
+            {% if work.video %}
+            <a href="{{ work.video }}" class="has-popup-video">
+              <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
+              <span class="info">
+                <span class="centrize full-width">
+                  <span class="vertical-center">
+                    <i class="icon fas fa-video"></i>
+                  </span>
+                </span>
+              </span>
+            </a>
+            {% else %}
             <a href="#gallery-{{ work.id | replace: '/', '-' }}" class="has-popup-gallery">
               <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
               <span class="info">
@@ -56,152 +70,61 @@
               <a href="{{ img | relative_url }}"></a>
               {% endfor %}
             </div>
-          </div>
-          <div class="desc">
-            <div class="category">{{ work.category }}</div>
-            <a href="#gallery-{{ work.id | replace: '/', '-' }}" class="name has-popup-gallery">{{ work.title }}</a>
-          </div>
-        </div>
-      </div>
-      {% endif %}
-
-      {% if work.type == 'video' %}
-      <div class="box-col {{ work.category_slug }}">
-        <div class="box-item">
-          <div class="image">
-            <a href="{{ work.video }}" class="has-popup-video">
-              <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
-              <span class="info">
-                <span class="centrize full-width">
-                  <span class="vertical-center">
-                    <i class="icon fas fa-video"></i>
-                  </span>
-                </span>
-              </span>
-            </a>
-          </div>
-          <div class="desc">
-            <div class="category">{{ work.category }}</div>
-            <a href="{{ work.video }}" class="name has-popup-video">{{ work.title }}</a>
-          </div>
-        </div>
-      </div>
-      {% endif %}
-
-      <!-- {% if work.type == 'image' or work.type == '' %}
-      <div class="box-col {{ work.category_slug }}">
-        <div class="box-item">
-          <div class="image">
-            <a href="{{ work.image | relative_url }}" class="has-popup-image">
-              <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
-              <span class="info">
-                <span class="centrize full-width">
-                  <span class="vertical-center">
-                    <i class="icon fas fa-image"></i>
-                  </span>
-                </span>
-              </span>
-            </a>
-          </div>
-          <div class="desc">
-            <div class="category">{{ work.category }}</div>
-            <a href="{{ work.image | relative_url }}" class="name has-popup-image">{{ work.title }}</a>
-          </div>
-        </div>
-      </div>
-      {% endif %}
-
-      {% if work.type == 'music' %}
-      <div class="box-col {{ work.category_slug }}">
-        <div class="box-item">
-          <div class="image">
-            <a href="{{ work.music }}" class="has-popup-music">
-              <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
-              <span class="info">
-                <span class="centrize full-width">
-                  <span class="vertical-center">
-                    <i class="icon fas fa-music"></i>
-                  </span>
-                </span>
-              </span>
-            </a>
-          </div>
-          <div class="desc">
-            <div class="category">{{ work.category }}</div>
-            <a href="{{ work.music }}" class="name has-popup-music">{{ work.title }}</a>
-          </div>
-        </div>
-      </div>
-      {% endif %}
-
-      {% if work.type == 'link' %}
-      <div class="box-col {{ work.category_slug }}">
-        <div class="box-item">
-          <div class="image">
-            <a href="{{ work.link }}" class="has-popup-link" target="_blank">
-              <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
-              <span class="info">
-                <span class="centrize full-width">
-                  <span class="vertical-center">
-                    <i class="icon fas fa-link"></i>
-                  </span>
-                </span>
-              </span>
-            </a>
-          </div>
-          <div class="desc">
-            <div class="category">{{ work.category }}</div>
-            <a href="{{ work.link }}" class="name has-popup-link" target="_blank">{{ work.title }}</a>
-          </div>
-        </div>
-      </div>
-      {% endif %}
-
-      {% if work.type == 'content' %}
-      <div class="box-col {{ work.category_slug }}">
-        <div class="box-item">
-          <div class="image">
-            <a href="#popup-{{ work.id | replace: '/', '-' }}" class="has-popup-media">
-              <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
-              <span class="info">
-                <span class="centrize full-width">
-                  <span class="vertical-center">
-                    <i class="icon fas fa-plus"></i>
-                  </span>
-                </span>
-              </span>
-            </a>
-          </div>
-          <div class="desc">
-            <div class="category">{{ work.category }}</div>
-            <a href="#popup-{{ work.id | replace: '/', '-' }}" class="name has-popup-media">{{ work.title }}</a>
-          </div>
-          <div id="popup-{{ work.id | replace: '/', '-' }}" class="popup-box mfp-fade mfp-hide">
-            <div class="content">
-              <div class="image">
+            {% endif %}
+              {% elsif work.type == 'achievements' %}
+              <a href="#gallery-{{ work.id | replace: '/', '-' }}" class="has-popup-gallery">
                 <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
+                <span class="info">
+                  <span class="centrize full-width">
+                    <span class="vertical-center">
+                      <i class="icon fas fa-trophy"></i>
+                    </span>
+                  </span>
+                </span>
+              </a>
+              <div id="gallery-{{ work.id | replace: '/', '-' }}" class="mfp-hide">
+                {% assign gallery = work.gallery | split: "," %}
+                {% for img in gallery %}
+                <a href="{{ img | relative_url }}"></a>
+                {% endfor %}
               </div>
-              <div class="desc">
-                <div class="category">{{ work.category }}</div>
-                <h4>{{ work.title }}</h4>
-                <div class="single-post-text">
-                  {{ work.content }}
-                </div>
-                {% if work.button_url != '' %}
-                <a href="{{ work.button_url }}" class="btn" target="_blank">
-                  <span class="animated-button"><span>{{ ui_text.view_project }}</span></span>
-                  <i class="icon fas fa-chevron-right"></i>
-                </a>
-                {% endif %}
-              </div>
+              {% elsif work.type == 'video' %}
+              <a href="{{ work.video }}" class="has-popup-video">
+                <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
+                <span class="info">
+                  <span class="centrize full-width">
+                    <span class="vertical-center">
+                      <i class="icon fas fa-video"></i>
+                    </span>
+                  </span>
+                </span>
+              </a>
+              {% elsif work.type == 'film' %}
+              <a href="{{ work.video }}" class="has-popup-video">
+                <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
+                <span class="info">
+                  <span class="centrize full-width">
+                    <span class="vertical-center">
+                      <i class="icon fas fa-film"></i>
+                    </span>
+                  </span>
+                </span>
+              </a>
+              {% endif %}
+            </div>
+            <div class="desc">
+              <div class="category">{{ work.category }}</div>
+              {% if work.type == 'mobile' or work.type == 'achievements' %}
+              <a href="#gallery-{{ work.id | replace: '/', '-' }}" class="name has-popup-gallery">{{ work.title }}</a>
+              {% else %}
+              <a href="{{ work.video }}" class="name has-popup-video">{{ work.title }}</a>
+              {% endif %}
             </div>
           </div>
         </div>
-      </div>
-      {% endif %} -->
-
       {% endfor %}
-    </div>
+    {% endfor %}
+  </div>
 
     <div class="clear"></div>
   </div>

@@ -9,7 +9,7 @@ settings:
 ### Header
 header:
   logo:
-    image: "assets/img/logo.png"
+    image: "assets/img/logo3.png"
     text: "Jeremiah <br />Jayoma"
     alt: "Jayoma Jeremiah"
 
@@ -24,11 +24,17 @@ portfolio:
     - name: "Mobile App"
       slug: "f-mobile"
 
-    - name: "Desktop"
-      slug: "f-desktop"
+    # - name: "Desktop"
+    #   slug: "f-desktop"
 
     - name: "Video"
       slug: "f-video"
+
+    - name: "Achievements"
+      slug: "f-achievements"
+
+    - name: "Short Film"
+      slug: "f-film"
 
 #     - name: "Links"
 #       slug: "f-link"

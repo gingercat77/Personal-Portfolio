@@ -217,19 +217,15 @@ skills:
       items:
         - label: "English"
           value: "90" #0-100 progress in %
-          text: "ability to engage in meaningful conversations, understand cultural nuances, and respond appropriately"
+          text: "Ability to engage in meaningful conversations, understand cultural nuances, and respond appropriately."
 
         - label: "Tagalog"
           value: "70" #0-100 progress in %
-          text: "Strong national identity and personal development. Cultivating a strong sense of self and belonging by connecting with cultural roots and fostering personal growth."
+          text: "Strong national identity and personal development. Can communicate fluently in Filipino language."
 
         - label: "Bisaya"
-          value: "98" #0-100 progress in %
+          value: "100" #0-100 progress in %
           text: "Communicate in the vernacular language to enhance understanding and improve communication."
-
-        # - label: "French"
-        #   value: "85" #0-100 progress in %
-        #   text: "Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh."
 
     - type: "circles" #skills progress type - default, dotted, circles
       title: "Coding Skills"
