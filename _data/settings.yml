@@ -24,6 +24,9 @@ portfolio:
     - name: "Mobile App"
       slug: "f-mobile"
 
+    - name: "Freelance "
+      slug: "f-freelance"
+
     # - name: "Desktop"
     #   slug: "f-desktop"
 
@@ -35,7 +38,6 @@ portfolio:
 
     - name: "Short Film"
       slug: "f-film"
-
 #     - name: "Links"
 #       slug: "f-link"
 

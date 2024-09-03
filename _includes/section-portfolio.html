@@ -33,15 +33,15 @@
     </div>
 
     <!-- portfolio items -->
-  <div class="box-items">
-    {% assign types = "mobile,achievements,film,video" | split: ',' %}
-    {% for type in types %}
+    <div class="box-items">
+      {% assign types = "mobile,achievements,film,video,freelance" | split: ',' %}
+      {% for type in types %}
       {% assign filtered_works = site.works | where: "type", type %}
       {% for work in filtered_works %}
-        <div class="box-col {{ work.category_slug }}">
-          <div class="box-item">
-            <div class="image">
-              {% if work.type == 'mobile' %}
+      <div class="box-col {{ work.category_slug }}">
+        <div class="box-item">
+          <div class="image">
+            {% if work.type == 'mobile' %}
             {% if work.video %}
             <a href="{{ work.video }}" class="has-popup-video">
               <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
@@ -71,60 +71,71 @@
               {% endfor %}
             </div>
             {% endif %}
-              {% elsif work.type == 'achievements' %}
-              <a href="#gallery-{{ work.id | replace: '/', '-' }}" class="has-popup-gallery">
-                <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
-                <span class="info">
-                  <span class="centrize full-width">
-                    <span class="vertical-center">
-                      <i class="icon fas fa-trophy"></i>
-                    </span>
+            {% elsif work.type == 'achievements' %}
+            <a href="#gallery-{{ work.id | replace: '/', '-' }}" class="has-popup-gallery">
+              <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
+              <span class="info">
+                <span class="centrize full-width">
+                  <span class="vertical-center">
+                    <i class="icon fas fa-trophy"></i>
                   </span>
                 </span>
-              </a>
-              <div id="gallery-{{ work.id | replace: '/', '-' }}" class="mfp-hide">
-                {% assign gallery = work.gallery | split: "," %}
-                {% for img in gallery %}
-                <a href="{{ img | relative_url }}"></a>
-                {% endfor %}
-              </div>
-              {% elsif work.type == 'video' %}
-              <a href="{{ work.video }}" class="has-popup-video">
-                <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
-                <span class="info">
-                  <span class="centrize full-width">
-                    <span class="vertical-center">
-                      <i class="icon fas fa-video"></i>
-                    </span>
-                  </span>
-                </span>
-              </a>
-              {% elsif work.type == 'film' %}
-              <a href="{{ work.video }}" class="has-popup-video">
-                <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
-                <span class="info">
-                  <span class="centrize full-width">
-                    <span class="vertical-center">
-                      <i class="icon fas fa-film"></i>
-                    </span>
-                  </span>
-                </span>
-              </a>
-              {% endif %}
+              </span>
+            </a>
+            <div id="gallery-{{ work.id | replace: '/', '-' }}" class="mfp-hide">
+              {% assign gallery = work.gallery | split: "," %}
+              {% for img in gallery %}
+              <a href="{{ img | relative_url }}"></a>
+              {% endfor %}
             </div>
-            <div class="desc">
-              <div class="category">{{ work.category }}</div>
-              {% if work.type == 'mobile' or work.type == 'achievements' %}
-              <a href="#gallery-{{ work.id | replace: '/', '-' }}" class="name has-popup-gallery">{{ work.title }}</a>
-              {% else %}
-              <a href="{{ work.video }}" class="name has-popup-video">{{ work.title }}</a>
-              {% endif %}
-            </div>
+            {% elsif work.type == 'video' %}
+            <a href="{{ work.video }}" class="has-popup-video">
+              <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
+              <span class="info">
+                <span class="centrize full-width">
+                  <span class="vertical-center">
+                    <i class="icon fas fa-video"></i>
+                  </span>
+                </span>
+              </span>
+            </a>
+            {% elsif work.type == 'freelance' %}
+            <a href="{{ work.video }}" class="has-popup-video">
+              <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
+              <span class="info">
+                <span class="centrize full-width">
+                  <span class="vertical-center">
+                    <i class="icon fas fa-laptop"></i>
+                  </span>
+                </span>
+              </span>
+            </a>
+            {% elsif work.type == 'film' %}
+            <a href="{{ work.video }}" class="has-popup-video">
+              <img src="{{ work.image | relative_url }}" alt="{{ work.title }}" />
+              <span class="info">
+                <span class="centrize full-width">
+                  <span class="vertical-center">
+                    <i class="icon fas fa-film"></i>
+                  </span>
+                </span>
+              </span>
+            </a>
+            {% endif %}
+          </div>
+          <div class="desc">
+            <div class="category">{{ work.category }}</div>
+            {% if work.type == 'mobile' or work.type == 'achievements' %}
+            <a href="#gallery-{{ work.id | replace: '/', '-' }}" class="name has-popup-gallery">{{ work.title }}</a>
+            {% else %}
+            <a href="{{ work.video }}" class="name has-popup-video">{{ work.title }}</a>
+            {% endif %}
           </div>
         </div>
+      </div>
       {% endfor %}
-    {% endfor %}
-  </div>
+      {% endfor %}
+    </div>
 
     <div class="clear"></div>
   </div>
